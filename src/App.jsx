@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import Details from "./routes/Details";
 import "./App.scss";
+import Err from "./components/Err";
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
   <Navbar />
   <Routes>
     <Route path="/MealApp/" element={<Home />} />
-    <Route path="/category/:category" element={<Home />} />
-    <Route path="/details/:id" element={<Details />} />
+    <Route path="/MealApp/category/:category" element={<Home />} />
+    <Route path="/MealApp/details/:id" element={<Details />} />
+    <Route path="*" element={<Err/>} />
   </Routes>
 </Router>
 

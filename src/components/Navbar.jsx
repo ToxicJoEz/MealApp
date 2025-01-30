@@ -26,7 +26,7 @@ function Navbar() {
         {categories.map((category) => (
           <NavLink
             key={category.strCategory}
-            to={`/category/${category.strCategory}`}
+            to={`/MealApp/category/${category.strCategory}`}
             className={({ isActive }) => (isActive ? "LinkActive" : "")}
           >
             {category.strCategory}
