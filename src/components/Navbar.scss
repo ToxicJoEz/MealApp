@@ -1,0 +1,53 @@
+$background-color: #333;
+$text-color: white;
+$link-spacing: 1rem;
+$title-font-size: 1.5rem;
+
+
+@mixin flex-align($justify: space-between, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin Link-Active(){
+    color: black !important;
+    background-color: white;
+    font-size: large;
+    font-weight: bold;
+}
+
+.navbar {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 1rem;
+
+  @include flex-align();
+
+  h1 {
+    font-size: $title-font-size;
+  }
+
+  .nav-links {
+    a {
+      color: $text-color;
+      text-decoration: none;
+      margin-left: $link-spacing;
+      padding: 0.5rem;
+      border-radius: 12px;
+      transition: all 0.6s ease;
+
+      &:hover {
+        @include Link-Active();
+      }
+    }
+  }
+
+  img{
+    width: 14rem;
+  }
+}
+
+.LinkActive {
+    @include Link-Active();
+}
