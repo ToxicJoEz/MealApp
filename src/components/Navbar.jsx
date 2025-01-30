@@ -17,7 +17,7 @@ function Navbar() {
       <img src={Logo} className="logo" alt="logo" />
       <div className="nav-links">
         <NavLink
-          to="/"
+          to="/MealApp/"
           className={({ isActive }) => (isActive ? "LinkActive" : "")}
         >
           Home
